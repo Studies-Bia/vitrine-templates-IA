@@ -710,6 +710,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* Show mobile menu toggle button */
   .mobile-menu-toggle {
     display: block;
