@@ -35,7 +35,7 @@ body {
 
 .logo {
   font-family: 'Orbitron', monospace;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: #8b5cf6;
   text-shadow: 0 0 20px #8b5cf6;
@@ -51,6 +51,7 @@ body {
   color: #8b5cf6;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -75,6 +76,11 @@ body {
 .mobile-menu-toggle:hover {
   color: #ffffff;
   text-shadow: 0 0 10px #8b5cf6;
+}
+
+.mobile-menu-toggle.active {
+  color: #dc2626;
+  text-shadow: 0 0 15px #dc2626;
 }
 
 
