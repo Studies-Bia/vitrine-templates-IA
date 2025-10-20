@@ -716,39 +716,47 @@ body {
     display: block;
   }
 
-  /* Hide nav links by default on mobile */
+  /* Slide-in menu from right */
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
     background: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
-    padding: 1rem 0;
-    border-bottom: 2px solid #8b5cf6;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 5rem 2rem 2rem;
+    border-left: 2px solid #8b5cf6;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    gap: 0;
   }
 
-  /* Show nav links when active */
+  /* Show nav links when active - slide in from right */
   .nav-links.active {
-    display: flex;
+    right: 0;
   }
 
   .nav-links li {
-    text-align: center;
-    padding: 0.5rem 0;
+    text-align: left;
+    padding: 0;
+    width: 100%;
   }
 
   .nav-links a {
     font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: block;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
   }
 
   .nav-links a:hover {
     background: rgba(139, 92, 246, 0.1);
+    padding-left: 2rem;
   }
 
   .about-content {
