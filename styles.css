@@ -612,9 +612,14 @@ body {
 
 .contact-item {
   display: flex;
-  align-items: start;
+  align-items: center;
   margin-bottom: 1.5rem;
   color: #e5e7eb;
+  white-space: nowrap;
+}
+
+.contact-item span {
+  white-space: nowrap;
 }
 
 .contact-item i {
