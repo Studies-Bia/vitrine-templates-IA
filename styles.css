@@ -201,8 +201,8 @@ body {
   font-size: clamp(1.8rem, 6vw, 3rem);
   text-align: center;
   margin-bottom: 3rem;
-  color: #8b5cf6;
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .about-content {
@@ -231,7 +231,7 @@ body {
 
 .about-text h3 {
   font-size: clamp(1.5rem, 4vw, 2rem);
-  color: #dc2626;
+  color: #8b5cf6;
   margin-bottom: 1rem;
 }
 
