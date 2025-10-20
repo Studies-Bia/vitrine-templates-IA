@@ -607,6 +607,7 @@ body {
   color: #8b5cf6;
   margin-bottom: 2rem;
   text-align: left;
+  white-space: nowrap;
 }
 
 .contact-item {
