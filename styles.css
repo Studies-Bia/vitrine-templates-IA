@@ -650,6 +650,11 @@ body {
   max-width: min(500px, 100%);
 }
 
+.contact-form button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
