@@ -130,6 +130,7 @@ body {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
   color: #e5e7eb;
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
   font-weight: 300;
 }
 
