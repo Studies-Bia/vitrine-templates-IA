@@ -786,11 +786,32 @@ body {
   }
 
   .contact-info {
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-info h3 {
+    text-align: left;
   }
 
   .contact-info .social-links {
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 0;
   }
 
   .cta-buttons {
