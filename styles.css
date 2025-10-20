@@ -66,7 +66,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #8b5cf6;
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -74,13 +74,13 @@ body {
 }
 
 .mobile-menu-toggle:hover {
-  color: #8b5cf6;
+  color: #ffffff;
   text-shadow: 0 0 10px #8b5cf6;
 }
 
 .mobile-menu-toggle.active {
-  color: #8b5cf6;
-  text-shadow: 0 0 15px #8b5cf6;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffffff;
 }
 
 
