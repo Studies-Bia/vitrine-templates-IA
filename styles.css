@@ -60,6 +60,23 @@ body {
   text-shadow: 0 0 10px #ffffff;
 }
 
+/* Mobile Menu Toggle - Hidden on Desktop */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #8b5cf6;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #8b5cf6;
+}
+
 
 /* Hero Section */
 .hero {
@@ -693,8 +710,44 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Show mobile menu toggle button */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Hide nav links by default on mobile */
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 2px solid #8b5cf6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    display: block;
+  }
+
+  .nav-links a:hover {
+    background: rgba(139, 92, 246, 0.1);
   }
 
   .about-content {
