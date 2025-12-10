@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bianca Bech - Desenvolvedora de Software</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
+  <title>Bianca Bech | Soluções Web Profissionais</title>
+  <meta name="description"
+    content="Templates de sites profissionais para seu negócio. Landing pages e sites institucionais modernos e responsivos.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,15 +16,14 @@
   <!-- Header -->
   <header class="header">
     <nav class="nav">
-      <div class="logo">BIANCA BECH</div>
+      <div class="logo">Bianca Bech | Soluções Web</div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle">
         <i class="fas fa-bars"></i>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Início</a></li>
+        <li><a href="#templates">Templates</a></li>
         <li><a href="#about">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Projetos</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
@@ -33,15 +32,275 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>DESENVOLVEDORA DE SOFTWARE</h1>
-      <p class="hero-subtitle">Transformando ideias em código?</p>
+      <h1>Tenha um Site Profissional para Seu Negócio</h1>
+      <p class="hero-subtitle">Templates modernos, responsivos e prontos para usar</p>
       <p class="hero-description">
-        Especialista em desenvolvimento de sistemas com foco em Angular, C# e MySQL.
-        Formada pelo programa Entra21, pronta para levar sua empresa ao próximo nível tecnológico.
+        Escolha entre nossos modelos especializados por área de atuação.
+        Sites otimizados para conversão, fáceis de personalizar e com design moderno.
       </p>
       <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-        <a href="#contact" class="btn btn-secondary">Fale Comigo</a>
+        <a href="#templates" class="btn btn-primary">Ver Modelos Disponíveis</a>
+        <a href="#contact" class="btn btn-secondary">Solicitar Orçamento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates Section -->
+  <section id="templates" class="projects">
+    <div class="container">
+      <h2 class="section-title">NOSSOS TEMPLATES</h2>
+
+      <!-- Category Filters -->
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="saude">Saúde</button>
+        <button class="filter-btn" data-category="tecnologia">Tecnologia</button>
+        <button class="filter-btn" data-category="alimentacao">Alimentação</button>
+        <button class="filter-btn" data-category="servicos">Serviços</button>
+        <button class="filter-btn" data-category="comercio">Comércio</button>
+      </div>
+
+      <!-- Templates Grid -->
+      <div class="templates-grid">
+        <!-- Template 1: Saúde - Nutricionista -->
+        <div class="template-card fade-in" data-category="saude">
+          <div class="template-image">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">NutriLife</h3>
+            <span class="template-category">Saúde</span>
+            <p class="template-description">
+              Landing page para nutricionistas. Inclui seção de serviços, depoimentos,
+              formulário de agendamento e blog de receitas saudáveis.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template NutriLife" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 2: Saúde - Personal Trainer -->
+        <div class="template-card fade-in" data-category="saude">
+          <div class="template-image">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">FitPro</h3>
+            <span class="template-category">Saúde</span>
+            <p class="template-description">
+              Site completo para personal trainers. Galeria de transformações,
+              planos de treino, calculadora de IMC e área de agendamento.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template FitPro" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 3: Tecnologia - Consultoria TI -->
+        <div class="template-card fade-in" data-category="tecnologia">
+          <div class="template-image">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">TechConsult</h3>
+            <span class="template-category">Tecnologia</span>
+            <p class="template-description">
+              Landing page para consultoria de TI. Portfólio de projetos,
+              serviços oferecidos, cases de sucesso e formulário de contato.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template TechConsult" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 4: Tecnologia - Cursos Online -->
+        <div class="template-card fade-in" data-category="tecnologia">
+          <div class="template-image">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">EduOnline</h3>
+            <span class="template-category">Tecnologia</span>
+            <p class="template-description">
+              Plataforma para cursos online. Catálogo de cursos, área de membros,
+              depoimentos de alunos e sistema de pagamento integrado.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template EduOnline" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 5: Alimentação - Restaurante -->
+        <div class="template-card fade-in" data-category="alimentacao">
+          <div class="template-image">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">Sabor & Arte</h3>
+            <span class="template-category">Alimentação</span>
+            <p class="template-description">
+              Site para restaurantes. Cardápio digital interativo, galeria de pratos,
+              sistema de reservas e integração com delivery.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template Sabor & Arte" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 6: Alimentação - Confeitaria -->
+        <div class="template-card fade-in" data-category="alimentacao">
+          <div class="template-image">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">Doce Encanto</h3>
+            <span class="template-category">Alimentação</span>
+            <p class="template-description">
+              Landing page para confeitarias. Galeria de produtos, catálogo de sabores,
+              formulário de orçamento e depoimentos de clientes.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template Doce Encanto" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 7: Serviços - Advocacia -->
+        <div class="template-card fade-in" data-category="servicos">
+          <div class="template-image">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">JurisAdvocacia</h3>
+            <span class="template-category">Serviços</span>
+            <p class="template-description">
+              Site institucional para escritórios de advocacia. Áreas de atuação,
+              equipe de advogados, artigos jurídicos e formulário de consulta.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template JurisAdvocacia" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 8: Serviços - Reformas -->
+        <div class="template-card fade-in" data-category="servicos">
+          <div class="template-image">
+            <i class="fas fa-tools"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">ReformaFácil</h3>
+            <span class="template-category">Serviços</span>
+            <p class="template-description">
+              Landing page para serviços de reforma. Portfólio de obras,
+              serviços oferecidos, calculadora de orçamento e depoimentos.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template ReformaFácil" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 9: Comércio - Loja de Produtos Naturais -->
+        <div class="template-card fade-in" data-category="comercio">
+          <div class="template-image">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">Vida Natural</h3>
+            <span class="template-category">Comércio</span>
+            <p class="template-description">
+              E-commerce para produtos naturais. Catálogo de produtos,
+              carrinho de compras, sistema de pagamento e blog informativo.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template Vida Natural" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 10: Serviços - Pet Shop -->
+        <div class="template-card fade-in" data-category="servicos">
+          <div class="template-image">
+            <i class="fas fa-paw"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">PetCare</h3>
+            <span class="template-category">Serviços</span>
+            <p class="template-description">
+              Site para pet shops e clínicas veterinárias. Serviços, agendamento online,
+              loja de produtos e dicas de cuidados com pets.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template PetCare" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 11: Tecnologia - Marketing Digital -->
+        <div class="template-card fade-in" data-category="tecnologia">
+          <div class="template-image">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">DigiMarketing</h3>
+            <span class="template-category">Tecnologia</span>
+            <p class="template-description">
+              Landing page para agências de marketing digital. Portfólio de cases,
+              serviços, calculadora de ROI e formulário de proposta.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template DigiMarketing" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 12: Comércio - Artesanato -->
+        <div class="template-card fade-in" data-category="comercio">
+          <div class="template-image">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="template-content">
+            <h3 class="template-title">Arte & Mãos</h3>
+            <span class="template-category">Comércio</span>
+            <p class="template-description">
+              Loja virtual para artesanato. Galeria de produtos artesanais,
+              história do artesão, sistema de encomendas personalizadas.
+            </p>
+            <div class="template-actions">
+              <a href="#" class="btn-demo">Ver Demo</a>
+              <a href="https://wa.me/5547999284292?text=Olá! Tenho interesse no template Arte & Mãos" target="_blank"
+                class="btn-contact">Quero Este</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -49,26 +308,31 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">SOBRE MIM</h2>
+      <h2 class="section-title">SOBRE NOSSAS SOLUÇÕES</h2>
       <div class="about-content">
         <div class="about-image">
-          <img src="assets/perfil-bianca.jpg" alt="Bianca Bech - Desenvolvedora de Software">
+          <img src="assets/perfil-bianca.jpg" alt="Bianca Bech - Desenvolvedora Web">
         </div>
         <div class="about-text">
-          <h3>Desenvolvedora Full Stack</h3>
+          <h3>Soluções Web Profissionais para Seu Negócio</h3>
           <p>
-            Sou uma desenvolvedora apaixonada por tecnologia e inovação.
-            Formada em setembro de 2025 pelo programa Entra21 em C#,
-            tenho experiência sólida em desenvolvimento de sistemas web e desktop.
+            Desenvolvemos templates de sites especializados por área de atuação,
+            pensados para maximizar a conversão e transmitir profissionalismo.
+            Cada modelo é cuidadosamente projetado para atender as necessidades
+            específicas do seu segmento.
           </p>
           <p>
-            Minha paixão por rock e tecnologia se reflete no meu trabalho:
-            preciso, eficiente e com personalidade. Estou sempre buscando
-            novos desafios e oportunidades para crescer profissionalmente.
+            Com experiência em desenvolvimento web utilizando as melhores tecnologias
+            (Angular, C#, MySQL), criamos soluções modernas, responsivas e otimizadas
+            para todos os dispositivos.
           </p>
           <p>
-            Especializada em Angular, C#, MySQL, SSH e Git, estou pronta
-            para transformar suas ideias em soluções tecnológicas robustas e escaláveis.
+            <strong>Por que escolher nossos templates?</strong><br>
+            ✓ Design moderno e profissional<br>
+            ✓ Totalmente responsivo (mobile, tablet, desktop)<br>
+            ✓ Otimizado para SEO e conversão<br>
+            ✓ Fácil personalização<br>
+            ✓ Suporte técnico incluso
           </p>
         </div>
       </div>
@@ -78,8 +342,26 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title">MINHAS HABILIDADES</h2>
+      <h2 class="section-title">TECNOLOGIAS UTILIZADAS</h2>
       <div class="skills-container">
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3>HTML5</h3>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3>CSS3</h3>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <h3>JavaScript</h3>
+        </div>
         <div class="skill-item fade-in">
           <div class="skill-icon">
             <i class="fab fa-angular"></i>
@@ -98,142 +380,6 @@
           </div>
           <h3>MySQL</h3>
         </div>
-        <div class="skill-item fade-in">
-          <div class="skill-icon">
-            <i class="fas fa-terminal"></i>
-          </div>
-          <h3>SSH</h3>
-        </div>
-        <div class="skill-item fade-in">
-          <div class="skill-icon">
-            <i class="fab fa-git-alt"></i>
-          </div>
-          <h3>Git</h3>
-        </div>
-        <div class="skill-item fade-in">
-          <div class="skill-icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3>AI Code</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section-title">MEUS PROJETOS</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn carousel-btn-prev" id="prevBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="carousel-wrapper">
-          <div class="carousel-track" id="carouselTrack">
-            <div class="project-card fade-in">
-              <div class="project-image">
-                <img src="assets/site-simplifique.png" alt="Simplifique+ Dashboard" class="project-icon">
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Simplifique+</h3>
-                <p class="project-description">
-                  Sistema completo para controle de turnover empresarial.
-                  Dashboard interativo com análise em tempo real, alertas inteligentes
-                  e relatórios avançados para gestão de RH.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">C#</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">API REST</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://biancabech.github.io/simplifique/" target="_blank" class="btn-project">
-                    Ver Projeto
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card fade-in">
-              <div class="project-image">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">E-Commerce Rock</h3>
-                <p class="project-description">
-                  Plataforma de e-commerce temática rock com sistema de pagamento integrado,
-                  catálogo de produtos e área administrativa completa.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">C#</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Stripe API</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="btn-project">
-                    Em Desenvolvimento
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card fade-in">
-              <div class="project-image">
-                <i class="fas fa-music"></i>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Rock Manager</h3>
-                <p class="project-description">
-                  Sistema de gestão para bandas de rock com controle de agenda,
-                  repertório, contratos e finanças. Interface inspirada no mundo do rock.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">C#</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">PDF Generator</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="btn-project">
-                    Em Desenvolvimento
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card fade-in">
-              <div class="project-image">
-                <i class="fas fa-code"></i>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Dev Tools Suite</h3>
-                <p class="project-description">
-                  Conjunto de ferramentas para desenvolvedores: gerador de código,
-                  validador de APIs, conversor de formatos e utilitários diversos.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">C#</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Web APIs</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="btn-project">
-                    Em Desenvolvimento
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-btn carousel-btn-next" id="nextBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      <div class="carousel-dots" id="carouselDots">
-        <!-- Dots will be generated by JavaScript -->
       </div>
     </div>
   </section>
@@ -241,17 +387,17 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title">VAMOS CONVERSAR?</h2>
+      <h2 class="section-title">ENTRE EM CONTATO</h2>
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Entre em Contato</h3>
+          <h3>Solicite um Orçamento</h3>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
             <span>fullstack.ads@gmail.com</span>
           </div>
           <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>(47) 99928-42922</span>
+            <i class="fab fa-whatsapp"></i>
+            <span>(47) 99928-4292</span>
           </div>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
@@ -277,8 +423,16 @@
             <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
-            <label for="company">Empresa</label>
-            <input type="text" id="company" name="company">
+            <label for="category">Categoria de Interesse</label>
+            <select id="category" name="category" required>
+              <option value="">Selecione...</option>
+              <option value="saude">Saúde</option>
+              <option value="tecnologia">Tecnologia</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="servicos">Serviços</option>
+              <option value="comercio">Comércio</option>
+              <option value="outro">Outro</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="message">Mensagem</label>
