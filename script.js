@@ -5,8 +5,6 @@ const navLinks = document.getElementById("navLinks");
 if (mobileMenuToggle) {
   mobileMenuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
-    
-    // Change color when menu is active
     this.classList.toggle("active");
   });
 
@@ -52,156 +50,111 @@ document.querySelectorAll(".fade-in").forEach((el) => {
 });
 
 // Form submission
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (e) {
+const contactForm = document.querySelector(".contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Mensagem enviada! Entrarei em contato em breve.");
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const category = document.getElementById("category").value;
+    const message = document.getElementById("message").value;
+    
+    // Criar mensagem para WhatsApp
+    const whatsappMessage = `Olá! Meu nome é ${name}.\n\nEmail: ${email}\nCategoria de Interesse: ${category}\n\nMensagem: ${message}`;
+    const whatsappUrl = `https://wa.me/5547999284292?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Limpar formulário
+    contactForm.reset();
   });
+}
 
 // Header background on scroll
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
   if (window.scrollY > 100) {
-    header.style.background = "rgba(10, 10, 10, 0.98)";
+    header.style.background = "rgba(10, 25, 47, 1)";
   } else {
-    header.style.background = "rgba(10, 10, 10, 0.95)";
+    header.style.background = "rgba(10, 25, 47, 0.98)";
   }
 });
 
-// Carousel functionality
-class Carousel {
-  constructor() {
-    this.track = document.getElementById("carouselTrack");
-    this.prevBtn = document.getElementById("prevBtn");
-    this.nextBtn = document.getElementById("nextBtn");
-    this.dotsContainer = document.getElementById("carouselDots");
-    this.cards = this.track.querySelectorAll(".project-card");
-    this.currentIndex = 0;
-    this.cardsPerView = this.getCardsPerView();
-    this.totalSlides = Math.ceil(this.cards.length / this.cardsPerView);
+// Template Filtering System
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const templateCards = document.querySelectorAll(".template-card");
 
-    this.init();
-  }
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const category = this.getAttribute("data-category");
 
-  getCardsPerView() {
-    if (window.innerWidth <= 768) return 1; // Mobile: 1 card
-    if (window.innerWidth <= 1024) return 2; // Tablet: 2 cards
-    return 2; // Desktop: 2 cards
-  }
+      // Update active button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
 
-  init() {
-    this.createDots();
-    this.updateCarousel();
-    this.bindEvents();
-    this.updateCardsPerView();
-  }
+      // Filter templates
+      templateCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
 
-  createDots() {
-    this.dotsContainer.innerHTML = "";
-
-    let totalDots;
-    if (window.innerWidth >= 1025) {
-      // Desktop: dots based on total slides (2 cards per slide)
-      totalDots = this.totalSlides;
-    } else {
-      // Tablet and mobile: normal behavior
-      totalDots = this.totalSlides;
-    }
-
-    for (let i = 0; i < totalDots; i++) {
-      const dot = document.createElement("button");
-      dot.className = "carousel-dot";
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => this.goToSlide(i));
-      this.dotsContainer.appendChild(dot);
-    }
-  }
-
-  bindEvents() {
-    this.prevBtn.addEventListener("click", () => this.prevSlide());
-    this.nextBtn.addEventListener("click", () => this.nextSlide());
-
-    window.addEventListener("resize", () => {
-      this.cardsPerView = this.getCardsPerView();
-      this.totalSlides = Math.ceil(this.cards.length / this.cardsPerView);
-      this.currentIndex = 0;
-      this.createDots();
-      this.updateCarousel();
-      this.updateCardsPerView();
+        if (category === "todos" || cardCategory === category) {
+          card.classList.remove("hidden");
+          // Re-trigger fade-in animation
+          card.classList.remove("visible");
+          setTimeout(() => {
+            if (isElementInViewport(card)) {
+              card.classList.add("visible");
+            }
+          }, 100);
+        } else {
+          card.classList.add("hidden");
+        }
+      });
     });
+  });
+
+  // Helper function to check if element is in viewport
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
   }
 
-  updateCardsPerView() {
-    const cardWidth = 100 / this.cardsPerView;
-    this.cards.forEach((card) => {
-      if (window.innerWidth >= 1025) {
-        // Desktop: exactly 2 cards, 45% each with margins
-        card.style.flex = "0 0 45%";
-        card.style.maxWidth = "500px";
-        card.style.margin = "0 2.5%";
-      } else {
-        // Tablet and mobile: normal behavior
-        card.style.flex = `0 0 ${cardWidth}%`;
-        card.style.maxWidth = window.innerWidth >= 769 ? "320px" : "none";
-        card.style.margin = "0";
-      }
-      card.style.minWidth = "0";
-    });
-  }
+  // Initialize - show all templates
+  templateCards.forEach((card) => {
+    card.classList.remove("hidden");
+  });
+});
 
-  updateCarousel() {
-    let translateX;
+// Add select styling for the form
+const selectElement = document.getElementById("category");
+if (selectElement) {
+  selectElement.style.width = "100%";
+  selectElement.style.padding = "clamp(0.8rem, 2vw, 1rem)";
+  selectElement.style.border = "2px solid #e6f1ff";
+  selectElement.style.borderRadius = "8px";
+  selectElement.style.background = "#ffffff";
+  selectElement.style.color = "#333333";
+  selectElement.style.fontSize = "clamp(0.9rem, 2.5vw, 1rem)";
+  selectElement.style.fontFamily = "'Roboto', sans-serif";
+  selectElement.style.cursor = "pointer";
+  selectElement.style.transition = "all 0.3s ease";
 
-    if (window.innerWidth >= 1025) {
-      // Desktop: show exactly 2 cards, move by 1 card at a time
-      translateX = -(this.currentIndex * (100 / this.cardsPerView));
-    } else {
-      // Tablet and mobile: normal behavior
-      translateX = -(this.currentIndex * (100 / this.cardsPerView));
-    }
+  selectElement.addEventListener("focus", function () {
+    this.style.borderColor = "#64ffda";
+    this.style.boxShadow = "0 0 0 3px rgba(100, 255, 218, 0.1)";
+    this.style.outline = "none";
+  });
 
-    this.track.style.transform = `translateX(${translateX}%)`;
-
-    // Update dots
-    document.querySelectorAll(".carousel-dot").forEach((dot, index) => {
-      dot.classList.toggle("active", index === this.currentIndex);
-    });
-  }
-
-  prevSlide() {
-    if (window.innerWidth >= 1025) {
-      // Desktop: move by 1 card, but ensure we don't go beyond available cards
-      this.currentIndex =
-        this.currentIndex > 0 ? this.currentIndex - 1 : this.totalSlides - 1;
-    } else {
-      // Tablet and mobile: normal behavior
-      this.currentIndex =
-        this.currentIndex > 0 ? this.currentIndex - 1 : this.totalSlides - 1;
-    }
-    this.updateCarousel();
-  }
-
-  nextSlide() {
-    if (window.innerWidth >= 1025) {
-      // Desktop: move by 1 card, but ensure we don't go beyond available cards
-      this.currentIndex =
-        this.currentIndex < this.totalSlides - 1 ? this.currentIndex + 1 : 0;
-    } else {
-      // Tablet and mobile: normal behavior
-      this.currentIndex =
-        this.currentIndex < this.totalSlides - 1 ? this.currentIndex + 1 : 0;
-    }
-    this.updateCarousel();
-  }
-
-  goToSlide(index) {
-    this.currentIndex = index;
-    this.updateCarousel();
-  }
+  selectElement.addEventListener("blur", function () {
+    this.style.borderColor = "#e6f1ff";
+    this.style.boxShadow = "none";
+  });
 }
-
-// Initialize carousel when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  new Carousel();
-});
